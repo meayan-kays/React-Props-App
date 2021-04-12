@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import Profile from './profile/Profile';
+import image from './profilePhoto.jpg'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" >
+        <Profile fullName="Kays Meayan"
+        bio = "I am from Ben Gardane in Tunisia. I am 29 years old."
+        profession = "Full Stack JS Developer">
+            <div >
+              <img src={image} alt="Photo_Profile" style={{height : "400px", width : "270px", borderRadius : "50px 20px"}}/>
+            </div>
+        </Profile>
     </div>
   );
 }
